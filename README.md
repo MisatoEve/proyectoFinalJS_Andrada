@@ -10,7 +10,7 @@ TUTOR/A: LUCIANA GARRO
 
 ## https://
 
-*Este proyecto es un gran avance en cuanto a conocimiento y práctica, dedicación y perseverancia, con gran esfuerzo se lleva a cabo en este hermoso mundo de JavaScript. Por supuesto mi cuaderno de apuntes de las clases gran aliado para consultas y guía junto al material de coder. ♥
+*Este proyecto es un gran avance en cuanto a conocimiento y práctica, dedicación y perseverancia, que con gran esfuerzo se lleva a cabo en este hermoso mundo de JavaScript. Por supuesto mi cuaderno de apuntes de las clases gran aliado para consultas y guía junto al material de coder. ♥
 Agradezco el apoyo recibido de los profesores, mi familia, y sobre todo mi hijo Hans.*
 
 MisatoEve^^
