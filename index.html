@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="ps4, ps3, ps5, videojuegos, PlayStation, Fifa2022, pases de batalla, eventos,  ">
+    <meta name="description" content="Tienda Online de videojuegos para PlayStation, principalmente enfocados en Ps4, y Ps5, todo el contenido de los juegos más vendidos, más jugados e info sobre eventos y más">
+    <link rel="shortcut icon" href="./multimedios/ps-bug.svg" type="image/x-icon">
+    <!--▼ BS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!--▼ Aos-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!--▼ HOJA DE ESTILOS CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <!--▼ Sweet Alert-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--▼ Toastify-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <title>Funko Plus | Home</title>
+</head>
+<body>
+<!-- ▼HEADER DE LA PAGINA-->
+    <header class="header">
+        <img src="./multimedios/symbolpeq.jpg" alt="simbolos PlayStation">
+        <nav class="header__menu navbar navbar-expand-lg navbar-dark">
+            <section class="headerMenu">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>            
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="header__nav navbar-nav">
+                        <li class="header__nav--li nav-item"><a class="nav-link active text-uppercase" aria-current="page" href="index.html">tienda</a></li>
+                        <li class="header__nav--li nav-item"><a class="nav-link text-uppercase" href="./page/noticias.html">noticias</a></li>
+                        <li class="header__nav--li nav-item"><a class="nav-link text-uppercase" href="./page/guias.html">guías</a></li>
+                        <li class="header__nav--li nav-item"><a class="nav-link text-uppercase" href="./page/contacto.html">contacto</a></li>              
+                    </ul>
+                </div>
+            </section>
+                  
+            <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+              <form class="d-flex">
+                <input id="buscador"class="form-control me-2" placeholder="qué estás buscando" aria-label="Search">
+                <button id="btnBuscar" class="btn btn-outline-success">Buscar</button>
+                </form> 
+            </div>
+        </nav>
+    </header>
+<!-- ▲FIN HEADER DE LA PAGINA-->
+<!-- ▼MAIN-->
+    <main>
+        <img src="./multimedios/ps.PNG" alt="fondo ps fifa 2023">
+        <h1 class="titulo" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">FUNKO PLUS</h1>        
+        <!-- ▼ CONTENIDO DE PRUEBA - TITULO Y SUBTITULO -->
+        <h2 class="titulo"> </h2>
+        <!-- ▲ CONTENIDO DE PRUEBA - TITULO Y SUBTITULO -->
+        <section class="formUser1">
+            <button id="botonDarkMode" class="btn btn-dark">Dark</button><br><br>
+            <button id="botonLightMode" class="btn btn-light">Light</button><br><br>
+            <button id="eliminarMode" class="btn btn-light">Eliminar preferencia</button><br><br>
+            <ul className="navbar-nav me-auto">  
+                <li className="nav-item " >
+                    <a id="botonCarrito" data-bs-toggle="modal" data-bs-target="#idModal" class="btn btn-secondary"><i class="fas fa-shopping-cart fa-1x"></i></a>
+                </li>
+            </ul>        
+        </section>
+        <h3 class="text-center m-4 text-bg-success">Juegos disponibles!!</h3>
+        <div id="loader"class="loader">Cargando productos...</div> 
+        <div id="productos"></div>
+    
+    <!--▼MODAL CARRITO-->
+    <div class="modal fade" id="idModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">Carrito de Compras</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modal-body">
+                </div>
+                <div class="row ml-ato">
+                    <p id="precioTotal"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" data-bs-dismiss="modal" class="btn btn-success" id="botonFinalizarCompra">Finalizar Compra</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--▲ FIN MODAL CARRITO-->
+    </main>
+<!-- ▲MAIN-->
+<!-- ▼FOOTER DE LA PAGINA-->
+    <div class="formUser">
+    <h4 class="footerTexto">FUNKO PLUS 2022 - Todos los derechos reservados</h4>
+    <article class="footerTexto__home">
+        <a class="footerHome text-uppercase container-fluid" href="index.html">ir a home</a>
+    </article>        
+    </div>
+<!-- ▲ FIN DE LA PAGINA-->
+<!-- ▼ ICONIFY-->
+<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+<!-- ▼ JS AOS-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+<!-- ▲ FIN JS AOS-->
+<!--BS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> 
+<!-- ▼ Toastify-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<!-- ▼Luxon-->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
+<!-- ▼ JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>   
+<!-- ▼ SCRIPTS own-->
+    <script src="./js/class.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,157 @@
+/* ▼ Normalize */
+* {
+    margin: 0;
+    padding: 0;
+}
+/* ▼ Estilos generales */
+
+html {
+    font-size: 62.5%; 
+}
+body{
+    color:black;
+    background-color: white;
+}
+/* ▼ Estilos Index */
+header {
+    background-color: #171516;
+}
+
+.titulo {
+    color: forestgreen;
+    font-size: 4em;
+    margin: 2.8rem;
+}
+.tituloDos {
+    color: #222347;
+    font-size: 2.5em;
+    margin: 2.8rem;
+}
+
+.productosEstilos{
+    display: grid;
+    grid-template-columns: repeat(3,1fr)
+}
+.card img{
+    width: 80%;
+}
+.card {
+    align-items: center;
+    height: 100%;
+    margin: 2rem;
+    padding: 0.5rem;
+}
+
+.formUser {
+    margin: 2rem;
+    padding: 2.8rem;
+    font-size: 1.5em;
+}
+.formUser1 {
+    margin: 2rem;
+    padding: 2.8rem;
+    font-size: 1em;
+    display: flex;
+    justify-content: flex-end;
+}
+.darkMode {
+    color:blueviolet;
+    background-color: black;
+}
+/* ▼Estilos Header */ 
+.header {
+    background-color: #000405;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem; 
+}
+.header__titulo {
+    color: #aec3b0;
+    font-size: 5em;
+    font-family: "Varela Round", sans-serif;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to top, #f1f2b5, #135058);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: none;
+}
+.header__menu {
+    list-style-type: none;
+    text-decoration: none;
+    color: #77a47b;
+    background-color: #000405; 
+}
+.header__nava {
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%; 
+}
+.header__nav--li {
+    padding: .45rem;
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    font-size: 1.7em; 
+}
+.header__nav--li:hover {
+background: #006FCD;
+border-radius: 5%; 
+}
+/* ▼Loader */
+ 
+.loader {
+    text-align: center;
+  }
+/* ▼card de carrito */
+.content{
+    padding: 1rem;
+    font-size: 1rem;
+
+}
+.content button{
+    padding: 0.5rem;
+    text-decoration: none;
+    color: gray;
+    border: 1px black solid;
+    border-radius: 20%;
+    color: white;
+    background-color: black;
+
+    font-size: 1.25rem;
+
+}
+.content p{
+    padding: 0.25rem;
+}
+.content button:hover{
+    color:red;
+    height: 200%;
+    
+}
+.autorCard{
+    font-size: 2rem;
+    height: 80px;
+}
+.precioCard{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+}
+
+
+/* ▼Noticias */
+.noticias {
+    background-image: url(../multimedios/saints-row-br.png);
+    width: 100%;
+    height: 700px;
+}
+.noticias h2 {
+    color: #222347;
+    font-size: 2.5em;
+    margin: 2.8rem;
+}

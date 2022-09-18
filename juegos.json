@@ -1,0 +1,98 @@
+[
+{
+    "id": 1,
+    "titulo": "Call of Duty: Vanguard Standard Edition Activision",
+    "anio": 2021,
+    "precio": 15499,
+    "formato": "fisico",
+    "imagen": "multimedios/CallOfDutyF.jpg"
+},
+{
+    "id": 2,
+    "titulo": "Call of Duty: Vanguard Standard Edition Activision",
+    "anio": 2021,
+    "precio": 6000,
+    "formato": "digital",
+    "imagen": "multimedios/CallOfDutyD.PNG"
+},
+{
+    "id": 3,
+    "titulo": "Rocket League Collector's Edition Psyonix",
+    "anio": 2022,
+    "precio": 15000,
+    "formato": "fisico",
+    "imagen": "multimedios/RocketLeagueF.jpg"
+},
+{
+    "id": 4,
+    "titulo": "Rocket League Standard Edition Psyonix",
+    "anio": 2015,
+    "precio": 500,
+    "formato": "digital",
+    "imagen": "multimedios/rocket-leagueD.jpg"
+},
+{
+    "id": 5,
+    "titulo": "Sonic Forces Standard Edition SEGA",
+    "anio": 2017,
+    "precio": 15577,
+    "formato": "fisico",
+    "imagen": "multimedios/SonicForcesF.jpg"
+},
+{
+    "id": 6,
+    "titulo": "Sonic Forces Standard Edition SEGA",
+    "anio": 2017,
+    "precio": 1952,
+    "formato": "digital",
+    "imagen": "multimedios/SonicForcesD.PNG"
+},
+{
+    "id": 7,
+    "titulo": "Fall Guys",
+    "anio": 2020,
+    "precio": 1299,
+    "formato": "digital",
+    "imagen": "multimedios/fall-guys.jpg"
+},
+{
+    "id": 8,
+    "titulo": "FIFA 22 Standard Edition Electronic Arts",
+    "anio": 2021,
+    "precio": 11399,
+    "formato": "fisico",
+    "imagen": "multimedios/fifaF.PNG"
+},
+{
+    "id": 9,
+    "titulo": "FIFA 22 Standard Edition Electronic Arts",
+    "anio": 2021,
+    "precio": 399,
+    "formato": "digital",
+    "imagen": "multimedios/fifaD.jpg"
+},
+{
+    "id": 10,
+    "titulo": "Gta V Grand Theft Auto 5 Premium Edition",
+    "anio": 2014,
+    "precio": 8399,
+    "formato": "fisico",
+    "imagen": "multimedios/gtaPF.PNG"
+},
+{
+    "id": 11,
+    "titulo": "Grand Theft Auto V Standard Edition Rockstar Games",
+    "anio": 2014,
+    "precio": 7895,
+    "formato": "fisico",
+    "imagen": "multimedios/gtav_F.jpg"
+},
+{
+    "id": 12,
+    "titulo": "Grand Theft Auto V Standard Edition Rockstar Games",
+    "anio": 2014,
+    "precio": 299,
+    "formato": "digital",
+    "imagen": "multimedios/gtavd.jpg"
+}
+]
