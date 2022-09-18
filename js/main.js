@@ -1,48 +1,5 @@
 //Entrega Trabajo Final
 //►Principal: Tienda de juegos PS4 versión digital - físico
-//►Vamos a definir los datos necesarios para comenzar
-
-//▼Creamos la estructura de los objetos
-/*class Juegos{
-    constructor (id, titulo, anio, precio, formato, imagen){
-        this.id = id;
-        this.titulo = titulo;
-        this.anio = anio;
-        this.precio = precio;
-        this.formato = formato;
-        this.imagen = imagen
-    };
-    verificarDatos (){
-        console.log (`El id es ${this.id}. El título es ${this.titulo}, el año es ${this.anio} y su precio es $${this.precio}, formato: ${this.formato}`)
-    };
-};*/
-//▼Construímos -> función constructora |
-//const juego1 = new Juegos(1, "Call of Duty: Vanguard Standard Edition Activision", 2021, 15499, "fisico", "multimedios/CallOfDutyF.jpg");
-//const juego1A = new Juegos(2, "Call of Duty: Vanguard Standard Edition Activision", 2021, 6000, "digital", "multimedios/CallOfDutyD.PNG");
-//const juego2 = new Juegos(3,"Rocket League Collector's Edition Psyonix", 2022, 15000, "fisico", "multimedios/RocketLeagueF.jpg");
-//const juego2A = new Juegos(4,"Rocket League Standard Edition Psyonix ", 2015, 500, "digital", "multimedios/rocket-leagueD.jpg");
-//const juego3 = new Juegos(5, "Sonic Forces Standard Edition SEGA", 2017, 15577, "fisico", "multimedios/SonicForcesF.jpg");
-//const juego3A = new Juegos(6, "Sonic Forces Standard Edition SEGA", 2017, 1952, "digital", "multimedios/SonicForcesD.PNG");
-//const juego4 = new Juegos(7, "Fall Guys", 2020, 1299, "digital", "multimedios/fall-guys.jpg");
-//const juego5 = new Juegos(8, "FIFA 22 Standard Edition Electronic Arts", 2021, 11399, "fisico", "multimedios/fifaF.PNG");
-//const juego5A = new Juegos(9, "FIFA 22 Standard Edition Electronic Arts", 2021, 399, "digital", "multimedios/fifaD.jpg");
-//const juego6 = new Juegos(10, "Gta V Grand Theft Auto 5 Premium Edition", 2014, 8399, "fisico", "multimedios/gtaPF.PNG");
-//const juego6A = new Juegos(11, "Grand Theft Auto V Standard Edition Rockstar Games", 2014, 7895, "fisico", "multimedios/gtav_F.jpg");
-//const juego6B = new Juegos(12, "Grand Theft Auto V Standard Edition Rockstar Games", 2014, 299, "digital", "multimedios/gtavd.jpg");
-
-//▼Creamos los nuevos Array
-/*let conjuntoJuegos = []*/
-
-/*fetch("juegos.json")
-.then(response => response.json())
-.then((data) =>{
-    console.log(data)
-    for(let juego of data){
-        let juegoNuevo = new Juegos(juego.id, juego.titulo, juego.anio, juego.precio, juego.formato, juego.imagen)
-        conjuntoJuegos.push(juegoNuevo)
-    }
-})*/
-
 
 //▼Elementos DOM 
 let botonCarrito = document.getElementById("botonCarrito")
@@ -55,63 +12,13 @@ divProductos.setAttribute("class", "productosEstilos")
 let inputBuscar = document.getElementById("buscador") 
 let btnBuscar = document.getElementById("btnBuscar")
 
-//▼Capturamos btn mostrar catalogo y pasamos eventos con function correspondiente
-//let mostrarCatalogoBtn = document.getElementById("verCatalogo")
-//mostrarCatalogoBtn.addEventListener("click", mostrarCatalogo)
-
-//▼Capturamos btn ocultar catalogo y pasamos eventos con function correspondiente
-//let ocultarCatalogoBtn = document.getElementById("ocultarCatalogo")
-//ocultarCatalogoBtn.onclick = ocultarCatalogo
-
-//▼Capturo guardarJuegoBtn y asignamos evento
-//const guardarJuegoBtn = document.getElementById("guardarJuegoBtn")
-//guardarJuegoBtn.addEventListener("click", guardarNuevojuego)
-
 //▼Evento botonCarrito
 botonCarrito.addEventListener('click', () => {
     cargarProductosCarrito(productosEnCarrito)
 })
-//▼Eventos ▲Eventos :P ►Eventos◄
 
-//▼Inicio del array vacío
-if(localStorage.getItem("conjuntoJuegos")){
-
-    conjuntoJuegos = JSON.parse(localStorage.getItem("conjuntoJuegos"))
-    console.log(conjuntoJuegos)
-}else{
-    console.log(`primera vez que carga array conjuntoJuegos`)
-    conjuntoJuegos.push(juego1, juego1A, juego2, juego2A, juego3, juego3A, juego4, juego5, juego5A, juego6, juego6A, juego6B)
-    localStorage.setItem("conjuntoJuegos", JSON.stringify(conjuntoJuegos))
-}
-/*
-//▼Desestructurar Array 
-let [a, ,b , c] = conjuntoJuegos
-a = "id: 1, titulo: Call of Duty: Vanguard Edition Activision, 2021, 18499, fisico"
-console.log(a) //►imprime en consola el valor asignado en la líne anterior y reemplaza el original
-//►id 2 se declara vacío
-console.log(b) //►imprime en consola {id: 3, titulo: "Rocket League Collector's Edition Psyonix", anio: 2022, precio: 15000, formato: 'fisico', …}
-console.log(c) //►imprime en consola {id: 4, titulo: 'Rocket League Standard Edition Psyonix ', anio: 2015, precio: 500, formato: 'digital', …}
-console.log(conjuntoJuegos) //►imprime en consola array ok
-console.log(...conjuntoJuegos) //►imprime en consola array ok
-//▼Buscar por título ||▼Se aplica Operador Nullish
-let tituloBuscado = conjuntoJuegos.find(juego => juego.titulo == "Fall Guys") ?? "No tenemos ese libro en stock"
-console.log(tituloBuscado) //►imprime según titulo buscado en consola {id: 7, titulo: 'Fall Guys', anio: 2020, precio: 1299, formato: 'digital', …}
-*/
 //▼Se aplica Operador OR
 let productosEnCarrito = JSON.parse(localStorage.getItem("carrito")) || []
-/*
-//▼Desestructurar un objeto "juego1" ▼Se aplica Alias a "juego1A" ||▼Se aplica Operador AND - OR
-const {titulo, precio} = juego1
-const {titulo: titulo1, precio: precio1} = juego1A
-let ComparaPrecio = precio
-if(ComparaPrecio == precio1){
-    console.log(`Estos juegos valen lo mismo: ${precio}`)
-}else{
-    console.log(`Estos juegos no valen lo mismo: ${titulo} vale ${precio} y ${titulo1} vale ${precio1}`)
-}
-ComparaPrecio > 10000 && console.log("Su producto es mayor a diez mil")
-console.log(ComparaPrecio || "El valor es 0 o no existe")
-*/
 
 //▼PLANTILLA DOM
 function mostrarCatalogo(){
@@ -239,15 +146,6 @@ function compraTotal(...productosTotal) {
 acumulador > 0 ? parrafoCompra.innerHTML = `El importe de su compra es ${acumulador}`: parrafoCompra.innerHTML = `<p>El carrito está vacío</p>`
 }
 
-/*function finalizarCompra(){
-    //Estamos finalizando la compra, por lo que debemos borrar todos los elementos del array y removerlo del localStorage
-    productosEnCarrito = []
-    localStorage.removeItem('carrito')
-    //Mostramos total
-    console.log(`El total de su compra es ${acumulador}`)
-    //Volvemos a cargar el modal con el array vacío por lo que quedará sin nada
-    cargarProductosCarrito(productosEnCarrito)
-}*/
 function finalizarCompra(){
     Swal.fire({
         title: 'Está seguro de realizar la compra?',
@@ -317,8 +215,6 @@ const loading = setTimeout(()=>{
     mostrarCatalogo(conjuntoJuegos)
 },2500)
 
-
-
 //▼Session Storage | ▼Aplico DarkMode
 let btnDarkMode = document.getElementById("botonDarkMode")
 let btnLightMode = document.getElementById("botonLightMode")
@@ -352,12 +248,3 @@ eliminarModo.addEventListener("click", ()=>{
 })
 //▲Fin declaraciones 
 
-//▼DETALLES APLICADOS se modificaron las líneas no considerar▼
-//►En línea 74 Desestructurar Array 
-//►En línea 83 Se aplica Operador Nullish
-//►En línea 87 Se aplica Operador OR
-//►En línea 90 a 100 Desestructurar un objeto "juego1" ||►Se aplica Alias a "juego1A" ||►Se aplica Operador AND - OR
-//►En línea 165 Se aplica Spread ...
-//►En línea 176 Se aplica Operador Ternario ? : 
-
-//▼DETALLES APLICADOS▼
